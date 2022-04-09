@@ -27,6 +27,7 @@ func get_input():
 	velocity = velocity.normalized() * speed
 
 func _physics_process(delta):
+	look_at(get_global_mouse_position())
 	get_input()
 	velocity = move_and_slide(velocity)
 
